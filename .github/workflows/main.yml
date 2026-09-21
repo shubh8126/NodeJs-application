@@ -22,7 +22,7 @@ jobs:
   deploy:
     if: github.event_name != 'pull_request'
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
