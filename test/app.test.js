@@ -25,7 +25,7 @@ describe("API", () => {
     const app = createApp();
     const res = await request(app, "GET", "/");
     assert.equal(res.status, 200);
-    assert.deepEqual(res.body, { message: "Welcome to my app" });
+    assert.deepEqual(res.body, { message: "Welcome to my first app" });
   });
 
   it("GET /health returns ok", async () => {
