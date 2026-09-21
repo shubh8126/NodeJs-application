@@ -1,8 +1,9 @@
 const { createApp } = require("./app");
+const { loadConfig } = require("./config");
 
-const PORT = process.env.PORT || 3000;
+const { port, host } = loadConfig();
 const app = createApp();
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, host, () => {
+  console.log(`Server running on http://${host}:${port}`);
 });
