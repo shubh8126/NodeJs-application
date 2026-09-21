@@ -6,7 +6,7 @@ function createApp() {
   app.use(express.json());
 
   app.get("/", (_req, res) => {
-    res.json({ message: "Welcome to my app" });
+    res.json({ message: "Welcome to my first app" });
   });
 
   app.get("/health", (_req, res) => {

@@ -1,0 +1,11 @@
+services:
+  app:
+    image: ${IMAGE}
+    container_name: node-app
+    restart: unless-stopped
+    ports:
+      - "4034:4034"
+    environment:
+      NODE_ENV: production
+      PORT: "4034"
+      HOST: "0.0.0.0"
